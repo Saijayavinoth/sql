@@ -1,0 +1,17 @@
+{
+	"select": {
+		"column": "lastname",
+		"type": "[]"
+	},
+	"from": {
+		"table": "professor"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}

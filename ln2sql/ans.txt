@@ -1,0 +1,1043 @@
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "Count how many city there are Pune as the cityName?"
+
+db_city
+query:   SELECT COUNT(*) FROM city WHERE city.cityName = OOV; 
+
+SELECT COUNT(*)
+FROM city
+WHERE city.cityName = OOV;
+
+database_store/city.sql
+
+SELECT COUNT(*)
+FROM city
+WHERE city.cityName = OOV;
+
+{
+	"select": {
+		"column": "None",
+		"type": "['COUNT']"
+	},
+	"from": {
+		"table": "city"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "cityName",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "OOV"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "What is the average age of student whose firstname is Doe or age over 25?"
+
+db_school
+query:   SELECT AVG(student.age) FROM student WHERE student.firstname = 'doe' OR student.age > '25?"'; 
+((None,),)
+
+SELECT AVG(student.age)
+FROM student
+WHERE student.firstname = 'doe'
+OR student.age > '25?"';
+
+database_store/school.sql
+
+SELECT AVG(student.age)
+FROM student
+WHERE student.firstname = 'doe'
+OR student.age > '25?"';
+
+{
+	"select": {
+		"column": "age",
+		"type": "['AVG']"
+	},
+	"from": {
+		"table": "student"
+	},
+	"join": {
+	},
+	"where": {
+		"conditions": [
+			{ "column": "firstname",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'doe'"
+			},
+			{
+			  "operator": "OR"
+			},
+			{ "column": "age",
+			  "type": "None",
+			  "operator": ">",
+			  "value": "'25?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "Count number of professor?"
+
+db_school
+query:   SELECT COUNT(*) FROM professor; 
+((4,),)
+
+SELECT COUNT(*)
+FROM professor;
+
+database_store/school.sql
+
+SELECT COUNT(*)
+FROM professor;
+
+{
+	"select": {
+		"column": "None",
+		"type": "['COUNT']"
+	},
+	"from": {
+		"table": "professor"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "Maximum salary of professor?"
+
+db_school
+query:   SELECT MAX(professor.salary) FROM professor; 
+((90000,),)
+
+SELECT MAX(professor.salary)
+FROM professor;
+
+database_store/school.sql
+
+SELECT MAX(professor.salary)
+FROM professor;
+
+{
+	"select": {
+		"column": "salary",
+		"type": "['MAX']"
+	},
+	"from": {
+		"table": "professor"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "average score of emp?"
+
+db_city
+query:   SELECT AVG(emp.score) FROM emp; 
+((Decimal('4.9000'),),)
+
+SELECT AVG(emp.score)
+FROM emp;
+
+database_store/city.sql
+
+SELECT AVG(emp.score)
+FROM emp;
+
+{
+	"select": {
+		"column": "score",
+		"type": "['AVG']"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "Count number of student having age greater than 22?"
+
+db_school
+query:   SELECT COUNT(*) FROM student WHERE student.age > '22?"'; 
+((3,),)
+
+SELECT COUNT(*)
+FROM student
+WHERE student.age > '22?"';
+
+database_store/school.sql
+
+SELECT COUNT(*)
+FROM student
+WHERE student.age > '22?"';
+
+{
+	"select": {
+		"column": "None",
+		"type": "['COUNT']"
+	},
+	"from": {
+		"table": "student"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "age",
+			  "type": "None",
+			  "operator": ">",
+			  "value": "'22?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/hotel.sql -l lang_store/english.csv -j output.json -i  "what is the name of the client whose telephone is 0978357689?"
+
+db_hotel
+query:   SELECT client.name FROM client WHERE client.telephone = '0978357689?"'; 
+()
+
+SELECT client.name
+FROM client
+WHERE client.telephone = '0978357689?"';
+
+database_store/hotel.sql
+
+SELECT client.name
+FROM client
+WHERE client.telephone = '0978357689?"';
+
+{
+	"select": {
+		"column": "name",
+		"type": "[]"
+	},
+	"from": {
+		"table": "client"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "telephone",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'0978357689?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/hotel.sql -l lang_store/english.csv -j output.json -i  "get the details of reservation?"
+
+db_hotel
+query:   SELECT * FROM reservation; 
+((1,
+  1,
+  1,
+  datetime.datetime(2013, 3, 14, 0, 0),
+  datetime.datetime(2013, 3, 28, 0, 0)),
+ (2,
+  3,
+  4,
+  datetime.datetime(2013, 3, 25, 0, 0),
+  datetime.datetime(2013, 3, 31, 0, 0)))
+
+SELECT *
+FROM reservation;
+
+database_store/hotel.sql
+
+SELECT *
+FROM reservation;
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "reservation"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "emp cityId equal to 1?"
+
+db_city
+query:   SELECT * FROM emp WHERE emp.cityId = '1?"'; 
+((1, 'Lord Brain', 1, 5), (6, 'Woody Allen', 1, 2))
+
+SELECT *
+FROM emp
+WHERE emp.cityId = '1?"';
+
+database_store/city.sql
+
+SELECT *
+FROM emp
+WHERE emp.cityId = '1?"';
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "cityId",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'1?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/hotel.sql -l lang_store/english.csv -j output.json -i  "average age of client"
+
+db_hotel
+query:   SELECT AVG(client.age) FROM client; 
+((Decimal('39.5000'),),)
+
+SELECT AVG(client.age)
+FROM client;
+
+database_store/hotel.sql
+
+SELECT AVG(client.age)
+FROM client;
+
+{
+	"select": {
+		"column": "age",
+		"type": "['AVG']"
+	},
+	"from": {
+		"table": "client"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "emp name with CityId equal to 4 and score equal to 4"
+
+db_city
+query:   SELECT * FROM emp WHERE emp.name = '4' AND emp.score = '4"'; 
+()
+
+SELECT *
+FROM emp
+WHERE emp.name = '4'
+AND emp.score = '4"';
+
+database_store/city.sql
+
+SELECT *
+FROM emp
+WHERE emp.name = '4'
+AND emp.score = '4"';
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+		"conditions": [
+			{ "column": "name",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'4'"
+			},
+			{
+			  "operator": "AND"
+			},
+			{ "column": "score",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'4"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "firstname of professor with salary greater than 70000 and salary less than 80000?"
+
+db_school
+query:   SELECT professor.firstname FROM professor WHERE professor.salary > '70000' AND professor.salary < '80000?"'; 
+(('Aline',),)
+
+SELECT professor.firstname
+FROM professor
+WHERE professor.salary > '70000'
+AND professor.salary < '80000?"';
+
+database_store/school.sql
+
+SELECT professor.firstname
+FROM professor
+WHERE professor.salary > '70000'
+AND professor.salary < '80000?"';
+
+{
+	"select": {
+		"column": "firstname",
+		"type": "[]"
+	},
+	"from": {
+		"table": "professor"
+	},
+	"join": {
+	},
+	"where": {
+		"conditions": [
+			{ "column": "salary",
+			  "type": "None",
+			  "operator": ">",
+			  "value": "'70000'"
+			},
+			{
+			  "operator": "AND"
+			},
+			{ "column": "salary",
+			  "type": "None",
+			  "operator": "<",
+			  "value": "'80000?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "emp order by score descending"
+
+db_city
+query:   SELECT * FROM emp ORDER BY emp.score DESC; 
+((7, 'Joaquin Phoenix', 2, 9),
+ (3, 'Ferrero Jeremy', 3, 6),
+ (5, 'Demi Moore', 5, 6),
+ (10, 'Marie Osmond', 5, 6),
+ (1, 'Lord Brain', 1, 5),
+ (2, 'Matthew', 2, 4),
+ (4, 'Bud Light', 4, 4),
+ (8, 'Meg Ryan', 3, 4),
+ (9, 'Trey Anastasio', 4, 3),
+ (6, 'Woody Allen', 1, 2))
+
+SELECT *
+FROM emp
+ORDER BY emp.score DESC;
+
+database_store/city.sql
+
+SELECT *
+FROM emp
+ORDER BY emp.score DESC;
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+		"column": "emp.score",
+		"order": "DESC"
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "emp order by score"
+
+db_city
+query:   SELECT * FROM emp ORDER BY emp.score ASC; 
+((6, 'Woody Allen', 1, 2),
+ (9, 'Trey Anastasio', 4, 3),
+ (2, 'Matthew', 2, 4),
+ (4, 'Bud Light', 4, 4),
+ (8, 'Meg Ryan', 3, 4),
+ (1, 'Lord Brain', 1, 5),
+ (3, 'Ferrero Jeremy', 3, 6),
+ (5, 'Demi Moore', 5, 6),
+ (10, 'Marie Osmond', 5, 6),
+ (7, 'Joaquin Phoenix', 2, 9))
+
+SELECT *
+FROM emp
+ORDER BY emp.score ASC;
+
+database_store/city.sql
+
+SELECT *
+FROM emp
+ORDER BY emp.score ASC;
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+		"column": "emp.score",
+		"order": "ASC"
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "emp group by score "
+
+db_city
+query:   SELECT * FROM emp GROUP BY emp.score; 
+
+SELECT *
+FROM emp
+GROUP BY emp.score;
+
+database_store/city.sql
+
+SELECT *
+FROM emp
+GROUP BY emp.score;
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+		"column": "score"
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "cityName of emp with name of emp equal to Matthew "
+
+db_city
+query:   SELECT city.cityName FROM emp INNER JOIN city ON emp.cityId = city.id WHERE emp.name = 'matthew'; 
+(('Hillwood',),)
+
+SELECT city.cityName
+FROM emp
+INNER JOIN city
+ON emp.cityId = city.id
+WHERE emp.name = 'matthew';
+
+db_city
+query:   SELECT city.cityName FROM emp INNER JOIN city ON emp.cityId = city.id WHERE emp.name = 'matthew'; 
+(('Hillwood',),)
+
+SELECT city.cityName
+FROM emp
+INNER JOIN city
+ON emp.cityId = city.id
+WHERE emp.name = 'matthew';
+
+database_store/city.sql
+
+SELECT city.cityName
+FROM emp
+INNER JOIN city
+ON emp.cityId = city.id
+WHERE emp.name = 'matthew';
+
+SELECT city.cityName
+FROM emp
+INNER JOIN city
+ON emp.cityId = city.id
+WHERE emp.name = 'matthew';
+
+{
+	"select": {
+		"column": "cityName",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+		"table": "city"
+	},
+	"where": {
+		"condition": [
+			{ "column": "name",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'matthew'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+{
+	"select": {
+		"column": "cityName",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+		"table": "city"
+	},
+	"where": {
+		"condition": [
+			{ "column": "name",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'matthew'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/hotel.sql -l lang_store/english.csv -j output.json -i  "name of client with idReservation of reservation not equal to 1"
+
+db_hotel
+query:   SELECT client.name FROM client INNER JOIN reservation ON client.idClient = reservation.idClient WHERE reservation.idReservation != '1"'; 
+(('PAROLEDOR',),)
+
+SELECT client.name
+FROM client
+INNER JOIN reservation
+ON client.idClient = reservation.idClient
+WHERE reservation.idReservation != '1"';
+
+database_store/hotel.sql
+
+SELECT client.name
+FROM client
+INNER JOIN reservation
+ON client.idClient = reservation.idClient
+WHERE reservation.idReservation != '1"';
+
+{
+	"select": {
+		"column": "name",
+		"type": "[]"
+	},
+	"from": {
+		"table": "client"
+	},
+	"join": {
+		"table": "reservation"
+	},
+	"where": {
+		"condition": [
+			{ "column": "idReservation",
+			  "type": "None",
+			  "operator": "!=",
+			  "value": "'1"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "score of emp with cityName of city equal to Pune"
+
+db_city
+query:   SELECT emp.score FROM emp INNER JOIN city ON emp.cityId = city.id WHERE city.cityName = 'pune"'; 
+()
+
+SELECT emp.score
+FROM emp
+INNER JOIN city
+ON emp.cityId = city.id
+WHERE city.cityName = 'pune"';
+
+database_store/city.sql
+
+SELECT emp.score
+FROM emp
+INNER JOIN city
+ON emp.cityId = city.id
+WHERE city.cityName = 'pune"';
+
+{
+	"select": {
+		"column": "score",
+		"type": "[]"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+		"table": "city"
+	},
+	"where": {
+		"condition": [
+			{ "column": "cityName",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'pune"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "Count total number of city"
+
+db_city
+query:   SELECT COUNT(*) FROM city; 
+((5,),)
+
+SELECT COUNT(*)
+FROM city;
+
+database_store/city.sql
+
+SELECT COUNT(*)
+FROM city;
+
+{
+	"select": {
+		"column": "None",
+		"type": "['COUNT']"
+	},
+	"from": {
+		"table": "city"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/city.sql -l lang_store/english.csv -j output.json -i  "how many emp are there?"
+
+db_city
+query:   SELECT COUNT(*) FROM emp; 
+((10,),)
+
+SELECT COUNT(*)
+FROM emp;
+
+database_store/city.sql
+
+SELECT COUNT(*)
+FROM emp;
+
+{
+	"select": {
+		"column": "None",
+		"type": "['COUNT']"
+	},
+	"from": {
+		"table": "emp"
+	},
+	"join": {
+	},
+	"where": {
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "count of student whose idClass is equal to 2?"
+
+db_school
+query:   SELECT COUNT(*) FROM student WHERE student.idClass = '2?"'; 
+((2,),)
+
+SELECT COUNT(*)
+FROM student
+WHERE student.idClass = '2?"';
+
+database_store/school.sql
+
+SELECT COUNT(*)
+FROM student
+WHERE student.idClass = '2?"';
+
+{
+	"select": {
+		"column": "None",
+		"type": "['COUNT']"
+	},
+	"from": {
+		"table": "student"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "idClass",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'2?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "find the student whose firstname is equal to KILO?"
+
+db_school
+query:   SELECT * FROM student WHERE student.firstname = 'kilo?"'; 
+()
+
+SELECT *
+FROM student
+WHERE student.firstname = 'kilo?"';
+
+database_store/school.sql
+
+SELECT *
+FROM student
+WHERE student.firstname = 'kilo?"';
+
+{
+	"select": {
+		"column": "None",
+		"type": "[]"
+	},
+	"from": {
+		"table": "student"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "firstname",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'kilo?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "find the lastname of professor whose idProf is 3?"
+
+db_school
+query:   SELECT professor.lastname FROM professor WHERE professor.idProf = '3?"'; 
+(('EHA',),)
+
+SELECT professor.lastname
+FROM professor
+WHERE professor.idProf = '3?"';
+
+database_store/school.sql
+
+SELECT professor.lastname
+FROM professor
+WHERE professor.idProf = '3?"';
+
+{
+	"select": {
+		"column": "lastname",
+		"type": "[]"
+	},
+	"from": {
+		"table": "professor"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "idProf",
+			  "type": "None",
+			  "operator": "=",
+			  "value": "'3?"'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+	},
+}
+
+***************
+python3 -m ln2sql.main -d database_store/school.sql -l lang_store/english.csv -j output.json -i  "show me the lastname of the professor whose salary is greater than 300 order by lastname?"
+db_school
+query:   SELECT professor.lastname FROM professor WHERE professor.salary > '300' ORDER BY professor.lastname ASC; 
+(('CEPTION',), ('EHA',), ('KEND',), ('TOMI',))
+
+SELECT professor.lastname
+FROM professor
+WHERE professor.salary > '300'
+ORDER BY professor.lastname ASC;
+
+database_store/school.sql
+
+SELECT professor.lastname
+FROM professor
+WHERE professor.salary > '300'
+ORDER BY professor.lastname ASC;
+
+{
+	"select": {
+		"column": "lastname",
+		"type": "[]"
+	},
+	"from": {
+		"table": "professor"
+	},
+	"join": {
+	},
+	"where": {
+		"condition": [
+			{ "column": "salary",
+			  "type": "None",
+			  "operator": ">",
+			  "value": "'300'"
+			}
+		]
+	},
+	"group_by": {
+	},
+	"select": {
+		"column": "professor.lastname",
+		"order": "ASC"
+	},
+}
+
+***************
